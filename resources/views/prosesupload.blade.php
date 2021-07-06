@@ -25,7 +25,7 @@
             <td>{{$data->berkas->getClientOriginalName()}}</td>
           </tr>
           <tr>
-            <th scope="row">Ukuran</th>
+            <th scope="row">Ukurano</th>
             <td>{{$data->berkas->getSize()}}</td>
           </tr>
           <tr>
