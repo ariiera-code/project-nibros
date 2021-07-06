@@ -1,0 +1,263 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+  text-decoration: none;
+}
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+body{
+	background-image: url("../img/backgroundweb.svg");
+	color:#000;
+	font-family: 'Roboto', sans-serif;
+	font-size:16px;
+	line-height:1.6em;
+	margin:0;
+}
+ol, ul {
+	list-style: none;
+}
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	text-align: left;
+	font-weight: normal;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a{
+  color:#000
+}
+
+
+
+/*navbar*/
+nav {
+  background: white;
+  padding: 10px;
+  margin: 0 0 40 0;
+  box-shadow: 0px 0px 30px rgb(204, 204, 204);
+  z-index: 1000;
+}
+label.logo {
+  color: #000;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 10px 0 0 40px;
+  font-weight:900;
+  object-position: bottom;
+}
+nav ul{
+  float:right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 17px;
+  font-weight:500;
+  padding: 7px 13px;
+  border-radius: 3px;
+}
+nav a:hover{
+  background: rgb(230, 230, 230);
+}
+nav a:active{
+  background: rgb(212, 212, 212);;
+}
+nav label a:hover{
+  background: none;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 858px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background:#0c426f ;
+    top: 100px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #dbdbdb;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+/*navbar*/
+
+/*left*/
+.container{
+	overflow:hidden;
+}
+#main{
+	float:left;
+	width:50%;
+  margin: 4rem 0 0 0;
+	padding:0 30px;
+	box-sizing: border-box;
+}
+section h1{
+  font-weight: 900;
+  margin: 2rem 4rem;
+  font-size: 70px;
+}
+section h2{
+  font-weight:normal;
+  width: fit-content;
+  margin: 2rem 0 1rem 4rem;
+}
+.btn{
+  margin: 0 0 0 4rem;
+  padding:1rem 3rem;
+  font-size: 16px;
+  border: 1px solid;
+  border-radius: 4rem;
+  font-family: "Roboto";
+  cursor: pointer;
+}
+.btn-homelogin{
+  font-size: 16px;
+  font-weight:bold;
+  margin: 0 0 0 4rem;
+  width: 10rem;
+  height: 3rem;
+  color: #333;
+  background-color: #eea268;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #e06d14;
+  transition: ease-out 0.2s;
+}
+.btn-homelogin:hover{
+  box-shadow: inset 10rem 0 0 0 #e06d14;
+}
+/*left*/
+
+#sidebar{
+  display: flex;
+	float:right;
+	width:40%;
+  height: 35rem;
+  margin: 0 3rem 0 0;
+  padding: 0;
+	background: #0c426f ;
+	color:#fff;
+	box-sizing: border-box;
+  z-index: 1;
+}
+#sidebar-about{
+  display: flex;
+	float:right;
+	width:40%;
+  height: 35rem;
+  margin: 0 3rem 0 0;
+  padding: 0;
+	color:#fff;
+	box-sizing: border-box;
+  z-index: 1;
+}
+.container section img{
+  align-items: flex-end;
+  width: 100%;
+  object-fit: cover;
+}
+#main-footer{
+	background: #0c426f ;
+	color:white;
+	text-align: center;
+	padding:20px;
+}
+
+/*about*/
+#main-about2{
+  float: left;
+  width:30%;
+  margin: 0 0 0 4rem;
+	padding:0;
+}
+#sidebar-about2{
+  float: right;
+  width:50%;
+  margin: 4rem 0 0 0;
+	padding:0 30px;
+	box-sizing: border-box;
+}
+/*about*/
+
+/*scrollbar*/
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24
+}
+
+body::-webkit-scrollbar-thumb {
+  background:#f1832c ;
+}
+/*scrollbar*/
